@@ -1,5 +1,3 @@
-# OpenSrc_Final_Assignment
-
 ## 기능 소개
 
 #### 1. 단위 변환기
@@ -7,20 +5,27 @@
 #### 3. 비밀번호 생성기
 #### 4. 점수 평균 계산기
 
+---
 
 ## 각 기능 별 담당자
 
 메인 프로그램(OpenSrc_Final.c) : 박지호
+
 계산기(calculator.c) : 김예빈
+
 비밀번호 생성기 : 김승기
+
 문자열 처리기 : 정현민
+
 단위 변환기, 충돌 처리 : 홍예준
 
+---
 
 ## 실행 방법
 
 OpenSrc_Final.c 실행 후 표시되는 옵션들의 입력으로 프로그램 실행
 
+---
 
 ## Git 협업 기록
 
@@ -32,6 +37,10 @@ OpenSrc_Final.c 실행 후 표시되는 옵션들의 입력으로 프로그램 �
 #### 충돌 결과
 
 ![충돌 사진](./solving.png)
+
+feature/unitConvert, feature/calculotr 에서 
+
+OpenSrc_Final.c 에 대해 동일한 부분에 다른 수정 내역이 push 되어
 
 OpenSrc_Final.c 에서 충돌이 발생한 부분을 확인할 수 있음
 
