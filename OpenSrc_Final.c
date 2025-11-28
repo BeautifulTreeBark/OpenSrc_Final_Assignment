@@ -6,7 +6,7 @@
 #include <time.h>
 
 // ===== 함수 선언 =====
-void unitConverter();
+void unitConverter(); // try making conflict
 void calculator();
 void averageScore();
 void stringCaseConverter();
