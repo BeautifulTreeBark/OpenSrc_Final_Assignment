@@ -1,60 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
-#include <time.h>
-
-// ===== ÇÔ¼ö ¼±¾ğ =====
-void unitConverter();
-void calculator();
-void averageScore();
-void stringCaseConverter();
-void generateRandomPassword();
-
-int main() {
-    int choice;
-
-    while (1) {
-        printf("\n==============================\n");
-        printf("         ¸Ş´º ¼±ÅÃ \n");
-        printf("==============================\n");
-        printf("1. ´ÜÀ§ º¯È¯±â\n");
-        printf("2. °£´Ü °è»ê±â (»çÄ¢¿¬»ê)\n");
-        printf("3. Á¡¼ö Æò±Õ °è»ê\n");
-        printf("4. ¹®ÀÚ¿­ ´ë/¼Ò¹®ÀÚ º¯È¯\n");
-        printf("5. ·£´ı ºñ¹Ğ¹øÈ£ »ı¼º\n");
-        printf("0. ÇÁ·Î±×·¥ Á¾·á\n");
-        printf("==============================\n");
-        printf("¸Ş´º ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
-        scanf_s("%d", &choice);
-
-        switch (choice) {
-        case 1:
-            unitConverter();
-            break;
-        case 2:
-            calculator();
-            break;
-        case 3:
-            averageScore();
-            break;
-        case 4:
-            stringCaseConverter();
-            break;
-        case 5:
-            generateRandomPassword();
-            break;
-        case 0:
-            printf("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.\n");
-            exit(0);
-        default:
-            printf("Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù. ´Ù½Ã ¼±ÅÃÇÏ¼¼¿ä.\n");
-        }
-    }
-    return 0;
-}
-//ºñ¹Ğ¹øÈ£ »ı¼º±â
+//ë¹„ë°€ë²ˆí˜¸ ìƒì„±ê¸°
 void shuffle(char* array, int n) {
     for (int i = n - 1; i > 0; i--) {
         int j = rand() % (i + 1);
@@ -66,20 +10,20 @@ void shuffle(char* array, int n) {
 
 void generateRandomPassword() {
     int length;
-    printf("ºñ¹Ğ¹øÈ£ ±æÀÌ ÀÔ·Â: ");
+    printf("ë¹„ë°€ë²ˆí˜¸ ê¸¸ì´ ì…ë ¥: ");
     if (scanf("%d", &length) != 1) {
-        printf("Àß¸øµÈ ÀÔ·Â\n");
+        printf("ì˜ëª»ëœ ì…ë ¥\n");
         return;
     }
 
     if (length < 4) {
-        printf("ºñ¹Ğ¹øÈ£ ÃÖ¼Ò 4ÀÚ ÀÌ»ó\n");
+        printf("ë¹„ë°€ë²ˆí˜¸ ìµœì†Œ 4ì ì´ìƒ\n");
         return;
     }
 
     const int MAX_LEN = 1024;
     if (length > MAX_LEN) {
-        printf("³Ê¹« ±ç ÃÖ´ë %dÀÚ·Î Á¦ÇÑ.\n", MAX_LEN);
+        printf("ë„ˆë¬´ ê¸º ìµœëŒ€ %dìë¡œ ì œí•œ.\n", MAX_LEN);
         length = MAX_LEN;
     }
 
@@ -101,7 +45,7 @@ void generateRandomPassword() {
 
     char* password = (char*)malloc((size_t)length + 1);
     if (!password) {
-        printf("¸Ş¸ğ¸® ÇÒ´ç ½ÇÆĞ\n");
+        printf("ë©”ëª¨ë¦¬ í• ë‹¹ ì‹¤íŒ¨\n");
         return;
     }
 
@@ -118,8 +62,8 @@ void generateRandomPassword() {
     shuffle(password, length);
     password[length] = '\0';
 
-    printf("»ı¼ºµÈ ºñ¹Ğ¹øÈ£: %s\n", password);
+    printf("ìƒì„±ëœ ë¹„ë°€ë²ˆí˜¸: %s\n", password);
 
     free(password);
 }
-//ºñ¹Ğ¹øÈ£ »ı¼º±â
+//ë¹„ë°€ë²ˆí˜¸ ìƒì„±ê¸°
